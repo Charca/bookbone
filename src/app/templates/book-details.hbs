@@ -1,0 +1,13 @@
+<div class="col-md-4">
+  {{#if cover_url}}
+    <img src="{{cover_url}}" alt="{{title}}">
+  {{else}}
+    <img src="http://d28hgpri8am2if.cloudfront.net/book_images/no_book_cover_lg.jpg"
+      alt="Book Cover not available">
+  {{/if}}
+</div>
+<div class="col-md-8">
+  <h3>{{title}}</h3>
+  <p>By {{author}}</p>
+  <p>{{description}}</p>
+</div>
