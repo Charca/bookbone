@@ -11,7 +11,23 @@
 </table>
 
 <h2>Add a book!</h2>
-<input type="text" name="book-title" placeholder="Enter Title">
-<input type="text" name="book-author" placeholder="Enter Author">
-<textarea name="book-description" placeholder="Enter Description"></textarea>
-<button id="add-book">Add new Book</button>
+<form>
+  <div class="form-group">
+    <label for="book-title">Title</label>
+    <input class="form-control" type="text" id="book-title" name="book-title" placeholder="Enter Title">
+  </div>
+  <div class="form-group">
+    <label for="book-author">Author</label>
+    <input class="form-control" type="text" id="book-author" name="book-author" placeholder="Enter Author">
+  </div>
+  <div class="form-group">
+    <label for="book-cover-url">Cover Image URL</label>
+    <input class="form-control" type="text" id="book-cover-url" name="book-cover-url" placeholder="Enter Cover Image URL">
+  </div>
+  <div class="form-group">
+    <label for="book-description">Description</label>
+    <textarea class="form-control" id="book-description" name="book-description" placeholder="Enter Description">
+    </textarea>
+  </div>
+  <button class="btn btn-primary" id="add-book">Add new Book</button>
+</form>

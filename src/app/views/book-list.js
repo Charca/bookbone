@@ -14,6 +14,7 @@ var BookList = Marionette.CompositeView.extend({
   ui: {
     'bookTitle': '[name=book-title]',
     'bookAuthor': '[name=book-author]',
+    'bookCoverURL': '[name=book-cover-url]',
     'bookDescription': '[name=book-description]',
     'addBookBtn': '#add-book'
   },
@@ -26,10 +27,13 @@ var BookList = Marionette.CompositeView.extend({
     this.collection.fetch();
   },
 
-  addBook: function() {
+  addBook: function(event) {
+    event.preventDefault();
+
     var book = {
       title: this.ui.bookTitle.val(),
       author: this.ui.bookAuthor.val(),
+      cover_url: this.ui.bookCoverURL.val(),
       description: this.ui.bookDescription.val()
     };
 
