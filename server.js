@@ -38,6 +38,13 @@ app.post('/books', function(req, res) {
   res.json(book);
 });
 
+app.delete('/books/:id', function(req, res) {
+  var book = _.findWhere(books, {id: parseInt(req.params.id, 10)});
+
+  books = _.without(books, book);
+  res.json({});
+});
+
 // Static files serve
 app.use(express.static('public'));
 
