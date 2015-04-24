@@ -16,7 +16,8 @@ var BookList = Marionette.CompositeView.extend({
     'bookAuthor': '[name=book-author]',
     'bookCoverURL': '[name=book-cover-url]',
     'bookDescription': '[name=book-description]',
-    'addBookBtn': '#add-book'
+    'addBookForm': '#add-book-form',
+    'addBookBtn': '#add-book-btn'
   },
 
   events: {
@@ -37,7 +38,8 @@ var BookList = Marionette.CompositeView.extend({
       description: this.ui.bookDescription.val()
     };
 
-    this.collection.create(book, {wait: true});
+    this.collection.create(book, { wait: true });
+    this.ui.addBookForm[0].reset();
   }
 });
 
