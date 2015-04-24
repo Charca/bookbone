@@ -2,7 +2,7 @@
   "name": "bookbone",
   "version": "0.1.0",
   "description": "A Backbone + Marionette SPA to find awesome books",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "./node_modules/karma/bin/karma start",
