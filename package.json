@@ -45,12 +45,12 @@
     "moment": "^2.10.2",
     "mousetrap": "^1.5.2",
     "sinon": "^1.14.1",
-    "underscore": "^1.8.3",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "body-parser": "^1.12.3",
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "underscore": "^1.8.3"
   },
   "engines": {
     "node": "0.12.2"
