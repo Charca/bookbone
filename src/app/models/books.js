@@ -3,10 +3,23 @@ var Book = require('./book');
 
 var Books = Backbone.Collection.extend({
   model: Book,
-  comparator: function(book) {
-    return book.get('title').toLowerCase();
+  url: '/books',
+  sortAttr: 'title',
+  sortOrder: 1,
+  comparator: function(a, b) {
+    var first = this.prepareValue(a.get(this.sortAttr));
+    var second = this.prepareValue(b.get(this.sortAttr));
+    return (+(first > second) || +(first === second) - 1) * this.sortOrder;
   },
-  url: '/books'
+  prepareValue: function(value) {
+    return (typeof value === 'string') ? value.toLowerCase() : value;
+  },
+  setSortAttr: function(sort) {
+    this.sortAttr = (sort) ? sort.substring(1) : this.sortAttr;
+  },
+  setSortOrder: function(order) {
+    this.sortOrder = (order) ? (order.substring(1) === 'asc') ? 1 : -1 : this.sortOrder;
+  }
 });
 
 module.exports = Books;

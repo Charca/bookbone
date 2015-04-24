@@ -34,6 +34,7 @@ app.post('/books', function(req, res) {
   var id = maxId.id + 1;
 
   book.id = id;
+  book.created = new Date();
   books.push(book);
   res.json(book);
 });

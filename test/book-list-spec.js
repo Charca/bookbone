@@ -61,5 +61,15 @@ describe('BookList', function() {
 
       expect(view.ui.bookTitle.val()).toEqual('');
     });
+
+    it('sorts the collection in asc and desc orders', function() {
+      view.render();
+
+      expect(collection.at(0).get('title')).toBe('My first book');
+
+      view.$('[data-sort-by=title]').click();
+
+      expect(collection.at(0).get('title')).toBe('My second book');
+    });
   });
 });

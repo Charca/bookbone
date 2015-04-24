@@ -1,4 +1,5 @@
 var Marionette = require('backbone.marionette');
+var moment = require('moment');
 
 var BookListItem = Marionette.ItemView.extend({
   template: require('../templates/book-list-item.hbs'),
@@ -11,6 +12,14 @@ var BookListItem = Marionette.ItemView.extend({
 
   events: {
     'click @ui.deleteBookBtn': 'deleteBook'
+  },
+
+  serializeData: function() {
+    var data = this.model.toJSON();
+
+    data.created_readable = moment(data.created).calendar();
+
+    return data;
   },
 
   deleteBook: function(event) {

@@ -1,5 +1,4 @@
-# bookbone
-[![Build Status](https://travis-ci.org/Charca/bookbone.svg)](https://travis-ci.org/Charca/bookbone)
+# bookbone [![Build Status](https://travis-ci.org/Charca/bookbone.svg)](https://travis-ci.org/Charca/bookbone)
 A Backbone + Marionette SPA to find awesome books
 
 You can see a live demo of this app here: URL
@@ -37,7 +36,7 @@ npm test
 ```
 
 ## TODO
-- Add Unit Tests
+x Add Unit Tests
 - Documentation
 - Postmortem
 - Cleanup
@@ -45,7 +44,7 @@ npm test
 
 ## OPTIONAL
 - Categories (linkable)
-- Sorting (linkable) - Need to add timestamp to book database
+x Sorting (linkable) - Need to add timestamp to book database
 - Switch Grid / Thumb views (linkable)
 - Optional fields to add book
 - Keyboard commands
