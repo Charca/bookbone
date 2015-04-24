@@ -13,9 +13,9 @@ var AppController = Marionette.Controller.extend({
     this.app = options.app;
   },
 
-  showIndex: function(sort, order, layout) {
+  showIndex: function(sorter, order, layout) {
     var collection = new Books({
-      sort: sort,
+      sorter: sorter,
       order: order
     });
 

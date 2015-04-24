@@ -7,7 +7,7 @@ var Books = Backbone.Collection.extend({
   sortAttr: 'title',
   sortOrder: 1,
   initialize: function(options) {
-    this.setSortAttr(options.sort);
+    this.setSortAttr(options.sorter);
     this.setSortOrder(options.order);
   },
   comparator: function(a, b) {
@@ -18,8 +18,8 @@ var Books = Backbone.Collection.extend({
   prepareValue: function(value) {
     return (typeof value === 'string') ? value.toLowerCase() : value;
   },
-  setSortAttr: function(sort) {
-    this.sortAttr = (sort) ? sort.substring(1) : this.sortAttr;
+  setSortAttr: function(sorter) {
+    this.sortAttr = (sorter) ? sorter.substring(1) : this.sortAttr;
   },
   setSortOrder: function(order) {
     this.sortOrder = (order) ? (order.substring(1) === 'asc') ? 1 : -1 : this.sortOrder;
