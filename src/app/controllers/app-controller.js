@@ -13,12 +13,15 @@ var AppController = Marionette.Controller.extend({
     this.app = options.app;
   },
 
-  showIndex: function(sort, order) {
-    var collection = new Books();
-    collection.setSortAttr(sort);
-    collection.setSortOrder(order);
+  showIndex: function(sort, order, layout) {
+    var collection = new Books({
+      sort: sort,
+      order: order
+    });
+
     this.app.contentRegion.show(new BookList({
-      collection: collection
+      collection: collection,
+      layout: layout
     }));
   },
 

@@ -20,7 +20,7 @@ var Router = Marionette.AppRouter.extend({
 
   appRoutes: {
     '': 'showIndex',
-    'index(/s:sort/o:order)': 'showIndex',
+    'index(/s:sort)(/o:order)(/l:layout)': 'showIndex',
     'details/:id': 'showDetails'
   }
 });

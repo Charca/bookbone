@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var browserify = require('browserify');
 var hbsfy = require('hbsfy');
 var source = require('vinyl-source-stream');
-//var sass = require('gulp-sass');
+var sass = require('gulp-sass');
 
 gulp.task('build-js', function() {
   browserify('./src/main.js')
@@ -13,7 +13,7 @@ gulp.task('build-js', function() {
 });
 
 gulp.task('build-scss', function() {
-  gulp.src('./src/styles/**/*.scss')
+  gulp.src('./src/scss/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('./public/css'));
 });
@@ -25,9 +25,9 @@ gulp.task('copy-vendor', function() {
 
 gulp.task('watch', ['build'], function() {
   gulp.watch('./src/**/*.{js,hbs}', ['build-js']);
-  //gulp.watch('./src/**/*.scss', ['build-scss']);
+  gulp.watch('./src/**/*.scss', ['build-scss']);
 });
 
-gulp.task('build', ['build-js'/*, 'build-scss'*/, 'copy-vendor']);
+gulp.task('build', ['build-js', 'build-scss', 'copy-vendor']);
 
 gulp.task('default', ['build']);

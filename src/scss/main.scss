@@ -1,0 +1,42 @@
+.book-list {
+  overflow: auto;
+
+  table {
+    margin-top: 50px;
+  }
+}
+
+.book-list-item-cover {
+  img {
+    width: 50px;
+  }
+}
+
+.layout-grid {
+  thead {
+    display: none;
+  }
+
+  // Heavy nesting to overwrite some Bootstrap styles...
+  tbody {
+    & > tr {
+      float: left;
+      width: 25%;
+      height: 220px;
+      border: 1px solid #CCC;
+
+      & > td,
+      & > th {
+        display: block;
+        border: 0;
+      }
+    }
+  }
+
+  .book-list-item-cover {
+    float: left;
+    img {
+      width: 100px;
+    }
+  }
+}

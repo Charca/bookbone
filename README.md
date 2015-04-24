@@ -45,6 +45,6 @@ x Add Unit Tests
 ## OPTIONAL
 - Categories (linkable)
 x Sorting (linkable) - Need to add timestamp to book database
-- Switch Grid / Thumb views (linkable)
+x Switch Grid / Thumb views (linkable)
 - Optional fields to add book
-- Keyboard commands
+x Keyboard commands

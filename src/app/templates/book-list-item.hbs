@@ -1,4 +1,14 @@
 <th>{{id}}</th>
+<td class="book-list-item-cover">
+  <a href="#details/{{id}}">
+    {{#if cover_url}}
+      <img src="{{cover_url}}" alt="{{title}}">
+    {{else}}
+      <img src="http://d28hgpri8am2if.cloudfront.net/book_images/no_book_cover_lg.jpg"
+        alt="Book Cover not available">
+    {{/if}}
+  </a>
+</td>
 <td><a href="#details/{{id}}" class="book-list-item-title">{{title}}</a></td>
 <td>{{created_readable}}</td>
 <td><a href="#" class="delete-book">Delete</a></td>

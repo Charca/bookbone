@@ -6,6 +6,10 @@ var Books = Backbone.Collection.extend({
   url: '/books',
   sortAttr: 'title',
   sortOrder: 1,
+  initialize: function(options) {
+    this.setSortAttr(options.sort);
+    this.setSortOrder(options.order);
+  },
   comparator: function(a, b) {
     var first = this.prepareValue(a.get(this.sortAttr));
     var second = this.prepareValue(b.get(this.sortAttr));
