@@ -18,11 +18,16 @@ gulp.task('build-scss', function() {
     .pipe(gulp.dest('./public/css'));
 });
 
+gulp.task('copy-vendor', function() {
+  gulp.src('./node_modules/bootstrap/dist/**/*.*')
+    .pipe(gulp.dest('./public/vendor/bootstrap'));
+});
+
 gulp.task('watch', ['build'], function() {
   gulp.watch('./src/**/*.{js,hbs}', ['build-js']);
   //gulp.watch('./src/**/*.scss', ['build-scss']);
 });
 
-gulp.task('build', ['build-js'/*, 'build-scss'*/]);
+gulp.task('build', ['build-js'/*, 'build-scss'*/, 'copy-vendor']);
 
 gulp.task('default', ['build']);
