@@ -1,7 +1,7 @@
 # bookbone [![Build Status](https://travis-ci.org/Charca/bookbone.svg)](https://travis-ci.org/Charca/bookbone)
 A Backbone + Marionette SPA to find awesome books
 
-You can see a live demo of this app here: URL
+You can see a live demo of this app here: [https://evening-stream-6118.herokuapp.com/](https://evening-stream-6118.herokuapp.com/)
 
 ## Instructions
 
@@ -34,17 +34,3 @@ To run unit tests:
 ```
 npm test
 ```
-
-## TODO
-x Add Unit Tests
-- Documentation
-- Postmortem
-- Cleanup
-- Deploy
-
-## OPTIONAL
-- Categories (linkable)
-x Sorting (linkable) - Need to add timestamp to book database
-x Switch Grid / Thumb views (linkable)
-- Optional fields to add book
-x Keyboard commands
