@@ -1,0 +1,28 @@
+footer {
+  margin: 20px 0;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid #CCC; }
+
+.book-list {
+  overflow: auto; }
+  .book-list table {
+    margin-top: 70px; }
+
+.book-list-item-cover img {
+  width: 50px; }
+
+.layout-grid thead {
+  display: none; }
+.layout-grid tbody > tr {
+  float: left;
+  width: 25%;
+  height: 220px;
+  border: 1px solid #CCC; }
+  .layout-grid tbody > tr > td, .layout-grid tbody > tr > th {
+    display: block;
+    border: 0; }
+.layout-grid .book-list-item-cover {
+  float: left; }
+  .layout-grid .book-list-item-cover img {
+    width: 100px; }
