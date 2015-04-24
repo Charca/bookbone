@@ -13,7 +13,7 @@ var BookDetails = Marionette.ItemView.extend({
 
   initialize: function() {
     this.model.fetch();
-    Mousetrap.bind('i', _.bind(this.goToIndex, this));
+    Mousetrap.bind('esc', _.bind(this.goToIndex, this));
   },
 
   goToIndex: function(event) {
