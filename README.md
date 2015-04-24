@@ -1,4 +1,5 @@
 # bookbone
+[![Build Status](https://travis-ci.org/Charca/bookbone.svg)](https://travis-ci.org/Charca/bookbone)
 A Backbone + Marionette SPA to find awesome books
 
 You can see a live demo of this app here: URL
