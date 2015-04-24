@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var _ = require('underscore');
 var Radio = require('backbone.radio');
+var Mousetrap = require('mousetrap');
 var Marionette = require('backbone.marionette');
 
 var BookListItem = require('./book-list-item');
